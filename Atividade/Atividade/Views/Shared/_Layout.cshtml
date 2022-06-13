@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Atividade</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Atividade.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/72950cc15c.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background: url('https://rollingstone.uol.com.br/media/_versions/shrek_e_o_burro_curiosidades_20_anos_filme_divulgacao_dreamworks_widelg.jpg');
+            background-size: 100% 100%;
+        }
+
+        footer{
+            background: white;
+            text-align: center;
+        }
+
+        .batata {
+            background: #ffffffb0;
+            width: 50%;
+            margin: auto;
+        }
+
+        .menuBeterraba .navbar-nav{
+            justify-content: center !important;
+        }
+
+        .conteudofoda{
+            background: #ffffff85;
+            padding:30px;
+        }
+
+        main {
+            background: #ffffffa6;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="display: block;" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid" style="justify-content: center !important;">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Atividade</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="container-fluid menuBeterraba">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><i class="fa-solid fa-dog"></i> Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cadastro" asp-action="Index"><i class="fa-brands fa-internet-explorer"></i> Cadastro foda</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Atividade - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
